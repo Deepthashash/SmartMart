@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Enter details</h1>
+<mat-dialog-content> 
+    <form [formGroup]="productsAddForm" (ngSubmit)="onClick(productsAddForm.value)" >
+        <div class = "form-group">
+            <label>Barcode number</label>
+            <input type="text" class="form-control" formControlName="barcode">
+        </div>
+        <div class="form-group">
+            <label>Product Name</label>
+            <input type="text"class="form-control" formControlName="productName">
+        </div>
+        <div class="form-group">
+               <label>Unit Price</label> 
+               <input type=""class="form-control" formControlName="unitPrice">
+        </div>
+        
+         <br/>
+           <button class="btn btn-primary" type="submit" mat-dialog-close> Update </button>
+              <button class="btn btn-primary" type="reset" mat-dialog-close> Close </button>            
+    </form>

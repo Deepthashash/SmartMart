@@ -4,6 +4,7 @@ import { DailogBodyComponent } from '../dailog-body/dailog-body.component';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ProductsService } from 'src/app/services/products.service';
 import { Barcode } from 'src/app/services/product.module';
+import { UpdateDialogComponent } from '../update-dialog/update-dialog.component';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { Barcode } from 'src/app/services/product.module';
 export class ProductsComponent implements OnInit {
   
   details: Barcode[];
-  constructor(public dialog:MatDialog, db:AngularFirestore, private service: ProductsService) {}
+  constructor(public dialog:MatDialog,private db:AngularFirestore, private service: ProductsService) {}
   
   dataSource = this.details;  
   ngOnInit() {
@@ -32,5 +33,14 @@ export class ProductsComponent implements OnInit {
     this.dialog.open(DailogBodyComponent);
   }
   
+  openUpdateDialog(){
+    this.dialog.open(UpdateDialogComponent);
+  }
+
+  onDelete(id:any){
+    if(confirm("Are you sure, you want to delete this?")){
+      this.db.doc('Barcode_details/'+id).delete();
+    }
+  }
 
 }

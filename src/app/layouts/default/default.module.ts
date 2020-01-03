@@ -13,6 +13,7 @@ import { AlertModule, ButtonsModule } from 'ngx-bootstrap';
 import { DailogBodyComponent } from 'src/app/modules/dailog-body/dailog-body.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProductsService } from 'src/app/services/products.service';
+import { UpdateDialogComponent } from 'src/app/modules/update-dialog/update-dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +22,12 @@ import { ProductsService } from 'src/app/services/products.service';
     PostsComponent,
     ProductsComponent,
     DailogBodyComponent,
+    UpdateDialogComponent,
   ],
   entryComponents:[
     DailogBodyComponent,
+    UpdateDialogComponent,
+
   ],
   imports: [
     CommonModule,
