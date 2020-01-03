@@ -1,0 +1,74 @@
+<div>
+    <form class="form-inline my-2 my-lg-0">
+        <h1>Products</h1>
+        <div style="position: absolute;
+        top: 20px;
+        right: 30px;">
+        <button type="button" class="btn btn-outline-primary btn-lg" (click)="openDialog()">Add + </button>
+        </div>
+        <div style="position: absolute;
+        top: 25px;
+        right: 150px;">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search products" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </div>
+    </form>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+<br>
+<table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Barcode</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product price</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pro of details">
+            <td>{{pro.barcodeNumber}}</td>
+            <td>{{pro.brand}}</td>
+            <td>{{pro.price}}</td>
+            <td><button type="button" class="btn btn-outline-primary" (click)="openDialog()">Update</button></td>
+          </tr>
+          <!-- <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr> -->
+        </tbody>
+      </table>
+
+      <!-- <mat-table [dataSource]="dataSource" class="mat-elevation-z8"> -->
+        <!-- Position Column -->
+        <!-- <ng-container matColumnDef="barcode">
+          <mat-header-cell *matHeaderCellDef> Barcode </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element}} </mat-cell>
+        </ng-container>
+       -->
+        <!-- Name Column -->
+        <!-- <ng-container matColumnDef="brand">
+          <mat-header-cell *matHeaderCellDef> Brand Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container> -->
+      
+        <!-- Weight Column -->
+        <!-- <ng-container matColumnDef="price">
+          <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+        </ng-container>
+                  -->
+        <!-- <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table> -->
+<br>

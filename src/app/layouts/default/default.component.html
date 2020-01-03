@@ -1,0 +1,14 @@
+<app-header (toggleSideBarForMe)="sideBarToggler($event)"></app-header>
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-sidebar (childEvent)="selectedComponent=$event"></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-dashboard *ngIf="selectedComponent === 1" ></app-dashboard>
+        <app-products *ngIf="selectedComponent === 2" ></app-products>
+        <!-- <app-dialog *ngIf="selectedComponent === 3" ></app-dialog> -->
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<app-footer></app-footer>
