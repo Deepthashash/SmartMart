@@ -33,8 +33,11 @@ export class ProductsComponent implements OnInit {
     this.dialog.open(DailogBodyComponent);
   }
   
-  openUpdateDialog(){
-    this.dialog.open(UpdateDialogComponent);
+  openUpdateDialog(details:Barcode){
+    // console.log(details);
+    this.dialog.open(UpdateDialogComponent,{
+      data: details,
+    });
   }
 
   onDelete(id:any){
