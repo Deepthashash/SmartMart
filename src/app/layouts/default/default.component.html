@@ -5,9 +5,9 @@
         <app-sidebar (childEvent)="selectedComponent=$event"></app-sidebar>
     </mat-drawer>
     <mat-drawer-content>
-        <app-dashboard *ngIf="selectedComponent === 1" ></app-dashboard>
+        <app-users *ngIf="selectedComponent === 1" ></app-users>
+        <app-dashboard *ngIf="selectedComponent === 3" ></app-dashboard>
         <app-products *ngIf="selectedComponent === 2" ></app-products>
-        <!-- <app-dialog *ngIf="selectedComponent === 3" ></app-dialog> -->
     </mat-drawer-content>
 </mat-drawer-container>
 

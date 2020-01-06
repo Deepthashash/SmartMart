@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-dailog-body',
@@ -9,7 +10,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class DailogBodyComponent implements OnInit {
 
-  constructor(private afs: AngularFirestore,) { }
+  constructor(private afs: AngularFirestore,private toastr: ToastrService) { }
   productsAddForm = new FormGroup({
     barcode: new FormControl(''),
     productName: new FormControl(''),
@@ -25,6 +26,7 @@ export class DailogBodyComponent implements OnInit {
      }, err=> {
        console.log(err);
      });
+     this.toastr.success("Succesfully Submitted!");
   }
   ngOnInit() {
   }

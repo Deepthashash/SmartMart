@@ -1,0 +1,24 @@
+<table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th scope="col">User Id</th>
+        <th scope="col">Email</th>
+        <th scope="col">NIC</th>
+        <th scope="col">Card Number</th>
+        <th scope="col">Wallet Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let users of details">
+        <td>{{users.userId}}</td>
+        <td>{{users.email}}</td>
+        <td>{{users.nic}}</td>
+        <td>{{users.cardNumber}}</td>
+        <td>{{users.walletBalance}}</td>
+        <td><button type="button" class="btn btn-outline-primary" (click)="openUpdateDialog(pro)">Update</button>  
+          <button type="button" class="btn btn-outline-danger" (click)="onDelete(pro.barcodeNumber)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DefaultComponent implements OnInit {
 
   sideBarOpen = true;
-  public selectedComponent = 2;
+  public selectedComponent = 1;
 
 
 

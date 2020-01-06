@@ -14,6 +14,11 @@ import { DailogBodyComponent } from 'src/app/modules/dailog-body/dailog-body.com
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProductsService } from 'src/app/services/products.service';
 import { UpdateDialogComponent } from 'src/app/modules/update-dialog/update-dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { ToastrModule } from 'ngx-toastr';
+import { UsersComponent } from 'src/app/modules/users/users.component';
+import { PendingUsersComponent } from 'src/app/modules/pending-users/pending-users.component';
+import { RegisteredUsersComponent } from 'src/app/modules/registered-users/registered-users.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +28,9 @@ import { UpdateDialogComponent } from 'src/app/modules/update-dialog/update-dial
     ProductsComponent,
     DailogBodyComponent,
     UpdateDialogComponent,
+    UsersComponent,
+    PendingUsersComponent,
+    RegisteredUsersComponent,
   ],
   entryComponents:[
     DailogBodyComponent,
@@ -51,6 +59,9 @@ import { UpdateDialogComponent } from 'src/app/modules/update-dialog/update-dial
 
     AlertModule.forRoot(),
     ButtonsModule.forRoot(),
+
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [
     DashboardService,
