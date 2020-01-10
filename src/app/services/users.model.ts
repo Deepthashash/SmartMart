@@ -1,7 +1,7 @@
 export class Users{
     email: any;
-    nic: String;
-    cardNumber: String;
-    walletBalance: number;
+    nic: any;
+    cardNumber: any;
+    walletBalance: any;
     userId:any;
 }

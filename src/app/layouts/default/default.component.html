@@ -6,8 +6,9 @@
     </mat-drawer>
     <mat-drawer-content>
         <app-users *ngIf="selectedComponent === 1" ></app-users>
-        <app-dashboard *ngIf="selectedComponent === 3" ></app-dashboard>
         <app-products *ngIf="selectedComponent === 2" ></app-products>
+        <!-- <app-dashboard *ngIf="selectedComponent === 3" ></app-dashboard> -->
+        <app-promotions *ngIf="selectedComponent === 3" ></app-promotions>
     </mat-drawer-content>
 </mat-drawer-container>
 

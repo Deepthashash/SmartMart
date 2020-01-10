@@ -19,6 +19,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { UsersComponent } from 'src/app/modules/users/users.component';
 import { PendingUsersComponent } from 'src/app/modules/pending-users/pending-users.component';
 import { RegisteredUsersComponent } from 'src/app/modules/registered-users/registered-users.component';
+import { UsersService } from 'src/app/services/users.service';
+import { PromotionsComponent } from 'src/app/modules/promotions/promotions.component';
+import { PromotionsDialogComponent } from 'src/app/modules/promotions-dialog/promotions-dialog.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +34,14 @@ import { RegisteredUsersComponent } from 'src/app/modules/registered-users/regis
     UsersComponent,
     PendingUsersComponent,
     RegisteredUsersComponent,
+    PromotionsComponent,
+    PromotionsDialogComponent,
+    
   ],
   entryComponents:[
     DailogBodyComponent,
     UpdateDialogComponent,
-
+    PromotionsDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -65,7 +71,8 @@ import { RegisteredUsersComponent } from 'src/app/modules/registered-users/regis
   ],
   providers: [
     DashboardService,
-    ProductsService
+    ProductsService,
+    UsersService
   ]
 })
 export class DefaultModule { }
