@@ -22,6 +22,10 @@ import { RegisteredUsersComponent } from 'src/app/modules/registered-users/regis
 import { UsersService } from 'src/app/services/users.service';
 import { PromotionsComponent } from 'src/app/modules/promotions/promotions.component';
 import { PromotionsDialogComponent } from 'src/app/modules/promotions-dialog/promotions-dialog.component';
+import { PromoService } from 'src/app/services/promo.service';
+import { UploadService } from 'src/app/services/upload.service';
+import { LoginComponent } from 'src/app/modules/login/login.component';
+import { LoginService } from 'src/app/services/login.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +40,7 @@ import { PromotionsDialogComponent } from 'src/app/modules/promotions-dialog/pro
     RegisteredUsersComponent,
     PromotionsComponent,
     PromotionsDialogComponent,
+    LoginComponent,
     
   ],
   entryComponents:[
@@ -72,7 +77,10 @@ import { PromotionsDialogComponent } from 'src/app/modules/promotions-dialog/pro
   providers: [
     DashboardService,
     ProductsService,
-    UsersService
+    UsersService,
+    PromoService,
+    UploadService,
+    LoginService
   ]
 })
 export class DefaultModule { }

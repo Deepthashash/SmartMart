@@ -5,6 +5,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { ProductsService } from 'src/app/services/products.service';
 import { Barcode } from 'src/app/services/product.module';
 import { UpdateDialogComponent } from '../update-dialog/update-dialog.component';
+import { PromotionsDialogComponent } from '../promotions-dialog/promotions-dialog.component';
 
 
 @Component({
@@ -37,6 +38,13 @@ export class ProductsComponent implements OnInit {
   openUpdateDialog(details:Barcode){
     // console.log(details);
     this.dialog.open(UpdateDialogComponent,{
+      data: details,
+    });
+  }
+
+  onAddPromo(details:Barcode){
+    // console.log(details);
+    this.dialog.open(PromotionsDialogComponent,{
       data: details,
     });
   }

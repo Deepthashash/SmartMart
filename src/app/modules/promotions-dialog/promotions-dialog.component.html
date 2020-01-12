@@ -1,20 +1,21 @@
 <h1 mat-dialog-title>Products Update</h1>
 <mat-dialog-content> 
-    <form #form="ngForm" (submit)="onUpdate(form)">
-        <div class = "form-group">
-            <label>Barcode number</label>
-            <input name="barcode" class="form-control" #barcode="ngModel" [(ngModel)]="service.formData.barcodeNumber">
+    <div *ngIf="currentUpload">
+        <div class="progress">
+          <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
         </div>
-        <div class="form-group">
-            <label>Product Name</label>
-            <input name="brand" class="form-control" #brand="ngModel" [(ngModel)]="service.formData.brand">
-        </div>
-        <div class="form-group">
-               <label>Unit Price</label> 
-               <input name="price" class="form-control" #price="ngModel" [(ngModel)]="service.formData.price">
-        </div>
-        
-         <br/>
-           <button class="btn btn-primary" type="submit" mat-dialog-close> Submit </button>
-              <button class="btn btn-primary" type="reset" mat-dialog-close> Clear </button>            
-    </form>
+        Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete
+      </div>
+      
+          <label>
+             <input type="file" (change)="detectFiles($event)">
+          </label>
+      
+          <button
+                  [disabled]="!selectedFiles"
+                  (click)="uploadSingle()">
+      
+            Upload Single
+          </button>
+      
+      

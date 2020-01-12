@@ -1,9 +1,13 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material';
-import { Barcode } from 'src/app/services/product.module';
-import { ProductsService } from 'src/app/services/products.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { NgForm } from '@angular/forms';
+import { PromoService } from 'src/app/services/promo.service';
+import { Promo } from 'src/app/services/promo.model';
+
+import * as _ from "lodash";
+import { Upload } from 'src/app/services/upload';
+import { UploadService } from 'src/app/services/upload.service';
 
 @Component({
   selector: 'app-promotions-dialog',
@@ -12,7 +16,7 @@ import { NgForm } from '@angular/forms';
 })
 export class PromotionsDialogComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: Barcode,private service: ProductsService,private firestore: AngularFirestore, ) { 
+  constructor(@Inject(MAT_DIALOG_DATA) public data: Promo,private service: PromoService,private firestore: AngularFirestore,private upSvc: UploadService ) { 
 
   this.service.formData = Object.assign({},data);
   }
@@ -26,4 +30,19 @@ export class PromotionsDialogComponent implements OnInit {
     this.firestore.doc('Barcode_details/'+formdata.barcode).update(formdata);
   }
 
+  selectedFiles: FileList;
+  currentUpload: Upload;
+
+  detectFiles(event) {
+      this.selectedFiles = event.target.files;
+  }
+
+  uploadSingle() {
+    let file = this.selectedFiles.item(0)
+    this.currentUpload = new Upload(file);
+    this.upSvc.pushUpload(this.currentUpload)
+  }
+
 }
+
+
