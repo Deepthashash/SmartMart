@@ -22,7 +22,7 @@ body {
 .logo{
 
     image-rendering: optimizeQuality;
-    padding-left: 20%;
+    
   
 }
 
@@ -85,6 +85,7 @@ body {
     font-style: italic;
     font-size: 20px;
     font-weight: bold;
+    color: rgb(112, 6, 112);
 }
 
 .btn-black{
@@ -96,5 +97,13 @@ body {
 button{
     margin-right: 4rem;
     margin-left: 3rem;
+    border-color: rebeccapurple;
+    background-color: rebeccapurple;
     
+}
+
+.form-group{
+    font-weight: bold;
+    font-size: 18px;
+
 }
