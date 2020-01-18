@@ -1,14 +1,21 @@
 
 <div class="sidenav">
     <div class="login-main-text">
-       <h2>Application<br> Login Page</h2>
-       <p>Login or register from here to access.</p>
+        
+        
     </div>
  </div>
  <div class="main">
     <div class="col-md-6 col-sm-12">
        <div class="login-form">
          <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" >
+            <div class="logo">
+               <img src=" http://dotndashgraphics.com/uploads/597eead1d8989.jpg " width="300px" height="200px">
+             </div>
+            <div class="login-form-text">
+               <a>WELCOME  to SMARTMART</a>
+            </div>
+             
             <div class = "form-group">
                 <label>Username</label>
                 <input type="text" class="form-control" formControlName="userName">
@@ -16,11 +23,12 @@
             <div class="form-group">
                 <label>Password</label>
                 <input type="password" class="form-control" formControlName="password">
-            </div>
+            </div><br/>
+            <span><a href="#">Forgot password?</a></span>
             
-             <br/>
-               <button class="btn btn-primary" type="submit"> Login </button>
-               <button class="btn btn-primary" type="reset"> Clear </button>            
+             <br/><br/><br/>
+               <button class="btn btn-primary" margin-left = 12px type="submit"> Login </button>
+               <button class="btn btn-primary" margin-left=12px type="reset"> Clear </button>            
         </form>
        </div>
     </div>

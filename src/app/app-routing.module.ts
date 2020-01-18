@@ -5,6 +5,8 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { PostsComponent } from './modules/posts/posts.component';
 import { LoginComponent } from './modules/login/login.component';
 
+ 
+
 const routes: Routes = [
   { path: '',
   redirectTo:'/login', pathMatch: 'full'},
