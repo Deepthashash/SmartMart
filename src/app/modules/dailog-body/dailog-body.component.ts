@@ -14,13 +14,15 @@ export class DailogBodyComponent implements OnInit {
   productsAddForm = new FormGroup({
     barcode: new FormControl(''),
     productName: new FormControl(''),
-    unitPrice: new FormControl(''),  
+    unitPrice: new FormControl(''),
+    stock: new FormControl(''),  
   });
   
   onClick(formData){
      this.afs.doc('Barcode_details/'+formData.barcode).set({
         brand: formData.productName ,
-        price: Number( formData.unitPrice )
+        price: Number( formData.unitPrice),
+        stock: Number( formData.stock),
      }).then( res => { 
        console.log('submitted');
      }, err=> {

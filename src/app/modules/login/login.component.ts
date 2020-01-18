@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       }
     );
 
-    if(this.pass = form.password){
+    if(this.pass == form.password){
       this.router.navigateByUrl('dash');
     }else{
       this.toastr.error("Wrong credentials!");

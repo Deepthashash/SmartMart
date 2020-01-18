@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UpdateDialogComponent } from '../update-dialog/update-dialog.component';
 import { Users } from 'src/app/services/users.model';
-import { UsersService } from 'src/app/services/users.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-registered-users',
@@ -14,7 +14,7 @@ import { UsersService } from 'src/app/services/users.service';
 export class RegisteredUsersComponent implements OnInit {
 
   details: Users[];
-  constructor(public dialog:MatDialog,private db:AngularFirestore, private service: UsersService) {}
+  constructor(public dialog:MatDialog,private db:AngularFirestore, private service: ProductsService) {}
  
   dataSource = this.details;  
   ngOnInit() {

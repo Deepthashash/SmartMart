@@ -19,13 +19,13 @@ import { ToastrModule } from 'ngx-toastr';
 import { UsersComponent } from 'src/app/modules/users/users.component';
 import { PendingUsersComponent } from 'src/app/modules/pending-users/pending-users.component';
 import { RegisteredUsersComponent } from 'src/app/modules/registered-users/registered-users.component';
-import { UsersService } from 'src/app/services/users.service';
 import { PromotionsComponent } from 'src/app/modules/promotions/promotions.component';
 import { PromotionsDialogComponent } from 'src/app/modules/promotions-dialog/promotions-dialog.component';
 import { PromoService } from 'src/app/services/promo.service';
 import { UploadService } from 'src/app/services/upload.service';
 import { LoginComponent } from 'src/app/modules/login/login.component';
 import { LoginService } from 'src/app/services/login.service';
+import { FeedbackComponent } from 'src/app/modules/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +41,7 @@ import { LoginService } from 'src/app/services/login.service';
     PromotionsComponent,
     PromotionsDialogComponent,
     LoginComponent,
+    FeedbackComponent,
     
   ],
   entryComponents:[
@@ -77,7 +78,6 @@ import { LoginService } from 'src/app/services/login.service';
   providers: [
     DashboardService,
     ProductsService,
-    UsersService,
     PromoService,
     UploadService,
     LoginService
