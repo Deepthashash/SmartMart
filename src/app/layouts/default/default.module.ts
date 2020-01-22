@@ -26,6 +26,11 @@ import { UploadService } from 'src/app/services/upload.service';
 import { LoginComponent } from 'src/app/modules/login/login.component';
 import { LoginService } from 'src/app/services/login.service';
 import { FeedbackComponent } from 'src/app/modules/feedback/feedback.component';
+import { PreorderComponent } from 'src/app/modules/preorder/preorder.component';
+import { NavBarComponent } from 'src/app/modules/preorder/subComponents/nav-bar/nav-bar.component';
+import { PendingPreordersComponent } from 'src/app/modules/preorder/subComponents/pending-preorders/pending-preorders.component';
+import { DialogComponent } from 'src/app/modules/preorder/subComponents/dialog/dialog.component';
+import { AcceptedPreordersComponent } from 'src/app/modules/preorder/subComponents/accepted-preorders/accepted-preorders.component';
 
 @NgModule({
   declarations: [
@@ -42,12 +47,17 @@ import { FeedbackComponent } from 'src/app/modules/feedback/feedback.component';
     PromotionsDialogComponent,
     LoginComponent,
     FeedbackComponent,
-    
+    PreorderComponent,
+    NavBarComponent,
+    PendingPreordersComponent,
+    AcceptedPreordersComponent,
+    DialogComponent,
   ],
   entryComponents:[
     DailogBodyComponent,
     UpdateDialogComponent,
     PromotionsDialogComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,

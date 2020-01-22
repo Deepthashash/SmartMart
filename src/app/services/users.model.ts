@@ -1,7 +1,7 @@
 export class Users{
     email: any;
-    nic: any;
-    cardNumber: any;
-    walletBalance: any;
+    Nexus: any;
+    NIC: any;
+    wallet_balance: any;
     userId:any;
 }

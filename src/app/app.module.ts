@@ -10,6 +10,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { RouteGuardService } from './route-guard.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AngularFireDatabaseModule
 
   ],
-  providers: [],
+  providers: [RouteGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule {ɵɵdefineInjectable: any }

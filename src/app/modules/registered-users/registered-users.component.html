@@ -12,9 +12,9 @@
       <tr *ngFor="let users of details">
         <td>{{users.userId}}</td>
         <td>{{users.email}}</td>
-        <td>{{users.nic}}</td>
-        <td>{{users.cardNumber}}</td>
-        <td>{{users.walletBalance}}</td>
+        <td>{{users.NIC}}</td>
+        <td>{{users.Nexus}}</td>
+        <td>{{users.wallet_balance}}</td>
         <td><button type="button" class="btn btn-outline-primary" (click)="openUpdateDialog(uers)">Update</button>  
           <button type="button" class="btn btn-outline-danger" (click)="onDelete(users.email)">Delete</button>
         </td>

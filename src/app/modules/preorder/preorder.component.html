@@ -1,21 +1,4 @@
-<h1>Pre Orders</h1>
-<div *ngFor="let data of details ; let num = index">
-    <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>User ID: {{data.userId}}</mat-card-title>
-          <mat-card-subtitle>{{data.BillNo}}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-           <ul>
-            <li *ngFor="let product of details; let num = index">
-                <h2>  {{product.brand}}  rs.{{product.price}}  {{product.amount}}</h2>
-            </li>
-           </ul>
-           <h3>Total Bill Amount {{data.BillAmount}}</h3>
-        </mat-card-content>
-        <mat-card-actions align="end">
-          <button mat-button>Mark</button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
+<app-nav-bar (childEvent)="selectedComponent=$event"></app-nav-bar>
+<app-pending-preorders *ngIf="selectedComponent === 1" ></app-pending-preorders>
+<app-accepted-preorders *ngIf="selectedComponent === 2" ></app-accepted-preorders>
+<!-- <app-pending-preorders></app-pending-preorders> -->
