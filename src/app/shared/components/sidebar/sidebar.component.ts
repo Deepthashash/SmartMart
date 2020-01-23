@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs';
+import { LoginComponent } from 'src/app/modules/login/login.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,13 +10,23 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
   @Output() public childEvent =  new EventEmitter();
-  constructor() { }
+  constructor( ) { }
+
+   
+  
 
   ngOnInit() {
+
+     
+     
   }
+
+  
 
   public fireEvent(x: number){
     this.childEvent.emit(x);
   }
 
+
+  
 }
