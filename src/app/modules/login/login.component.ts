@@ -26,18 +26,27 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
   
   onLogin(form){
-    this.firestore.doc('admin/'+form.userName || 'emp/'+form.userName).get().subscribe(
+    this.firestore.collection('OtherUsers', ref => ref.where('userName', '==', form.userName)).snapshotChanges().subscribe(
       res => {
+ 
          console.log(res.get('userName'));
          this.username = res.get('userName');
          this.pass = res.get('password');          
+ 
+        // console.log(res.get('userName'));
+        // this.username = res.get('userName');
+        // this.pass = res.get('password');          
+ 
       }
     );
       
   
 
-    if(this.pass = form.password){
-      if(this.username = 'admin/'+form.userName )
+    if(this.pass == form.password){
+      if(this.username == 'otherUsers/'+form.userName )
+      this.router.navigateByUrl('dash');
+    }else if(this.pass == form.password){
+      if(this.username == 'otherUsers/'+form.userName )
       this.router.navigateByUrl('dash');
     }else{
       this.toastr.error("Wrong credentials!");
