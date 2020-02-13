@@ -5,7 +5,7 @@
         <th scope="col">Email</th>
         <th scope="col">NIC</th>
         <th scope="col">Card Number</th>
-        <!--<th scope="col">Wallet Balance</th>-->
+        <th scope="col">Wallet Balance</th>
       </tr>
     </thead>
     <tbody>
@@ -14,9 +14,10 @@
         <td>{{users.email}}</td>
         <td>{{users.NIC}}</td>
         <td>{{users.Nexus}}</td>
-        <!--<td>{{users.wallet_balance}}</td>-->
-           
-        <td><button type="button" class="btn btn-outline-danger" (click)="onDelete(users.email)">Delete</button></td>
+        <td>{{users.wallet_balance}}</td>
+        <td><button type="button" class="btn btn-outline-primary" (click)="openUpdateDialog(uers)">Update</button>  
+          <button type="button" class="btn btn-outline-danger" (click)="onDelete(users.email)">Delete</button>
+        </td>
       </tr>
     </tbody>
   </table>
