@@ -29,13 +29,14 @@ export class LoginComponent implements OnInit {
     this.firestore.collection('OtherUsers', ref => ref.where('userName', '==', form.userName)).snapshotChanges().subscribe(
       res => {
  
-         console.log(res.get('userName'));
-         this.username = res.get('userName');
-         this.pass = res.get('password');          
+        //  console.log(res.get('userName'));
+        //  this.username = res.get('userName');
+        //  this.pass = res.get('password');          
  
         // console.log(res.get('userName'));
         // this.username = res.get('userName');
-        // this.pass = res.get('password');          
+        // this.pass = res.get('password'); 
+              
  
       }
     );

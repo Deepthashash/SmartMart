@@ -1,7 +1,6 @@
 export class PreOrders{
     docId: string;
-    BillAmount: number;
-    amount: [];
+    totalPrice: number;
     brand: [];
     pending: number;
     price: [];

@@ -8,27 +8,13 @@
 
         <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
             <ul fxLayout="row" fxLayoutGap="20px">
+                 
+                 
                 <li>
-                    <button mat-icon-button>
-                        <mat-icon>settings</mat-icon>
-                    </button>
-                </li>
-                <li>
-                    <button mat-icon-button>
-                        <mat-icon>help_outline</mat-icon>
-                    </button>
-                </li>
-                <li>
-                    <button mat-button [matMenuTriggerFor]="menu">
-                        <mat-icon>person_outline</mat-icon>
-                    </button>
-                     
-
-                </li>
-                <li>
-                    <a class = "nav" style="cursor:pointer" (click)="loginService.logout()">Logout</a>
+                    <a class = "nav" style="cursor:pointer" (click)="loginService.logout()">logout</a>
                 </li>
             </ul>
         </div>
     </mat-toolbar-row>
 </mat-toolbar>
+

@@ -16,7 +16,7 @@ export class DialogComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data: PreOrders,private service: ProductsService,private firestore: AngularFirestore, ) { 
 
     this.service.formPre = Object.assign({},data);
-    console.log(service.formPre.BillAmount);
+    console.log(service.formPre.totalPrice);
   }
 
   ngOnInit() {

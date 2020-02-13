@@ -15,7 +15,7 @@ export class AcceptedPreordersComponent implements OnInit {
   brandName: String;
   constructor(public dialog:MatDialog,private db:AngularFirestore, private service: ProductsService) {}
   
-  // dataSource = this.details;  
+   dataSource = this.details;  
   ngOnInit() {
     this.service.getCompletedPreOrders().subscribe(actionArray => {
       this.details = actionArray.map(item => {
