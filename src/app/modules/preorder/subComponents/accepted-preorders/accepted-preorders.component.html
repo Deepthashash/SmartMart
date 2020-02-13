@@ -1,4 +1,6 @@
-<h1>Completed Pre-orders</h1>
+<div class="accept-form-text">
+  <a>Accepted Pre Orders</a>
+</div>
 <div *ngFor="let data of details">
 <mat-card class="example-card" (click)="onTap(data)">
     <mat-card-header>
@@ -11,7 +13,7 @@
     </mat-card-content>
     <mat-card-actions align="end">
       <div *ngIf="data.pending === 1">
-        <button mat-raised-button (click)="onComplete(data.docId)">Completed</button>
+        <button class="btn btn-primary" (click)="onComplete(data.docId)">Complete</button>
       </div>
     </mat-card-actions>
   </mat-card>
