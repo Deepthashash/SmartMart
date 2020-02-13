@@ -1,4 +1,4 @@
-.preorder-form-text {
+.accept-form-text {
      
     padding: 15px;
     font-family: round($number: 3);
@@ -6,4 +6,18 @@
     font-size: 40px;
     font-weight: bold;
     color: rgb(112, 6, 112);
+}
+
+.example-card{
+    background-color: yellowgreen;
+    height: fit-content;
+    width: fit-content;
+}
+
+button{
+    //margin-right: 4rem;
+    margin-left: 3rem;
+    border-color: rebeccapurple;
+    background-color: rebeccapurple;
+    
 }
