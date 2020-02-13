@@ -1,10 +1,16 @@
 <div>
     <form class="form-inline my-2 my-lg-0">
-        <div class="text">
-            <h1>{{name}}</h1>
+        <h1>{{name}}</h1>
+        <div style="position: absolute;
+        top: 20px;
+        right: 30px;">
+        <button type="button" class="btn btn-outline-primary btn-lg" (click)="selectComponent(0)">Registered Users</button>
         </div>
-         
-         
+        <div style="position: absolute;
+        top: 20px;
+        right: 220px;">
+        <button type="button" class="btn btn-outline-primary btn-lg" (click)="selectComponent(1)">Pending Users</button>
+        </div>
         <!-- <div style="position: absolute;
         top: 25px;
         right: 300px;">
@@ -19,5 +25,6 @@
 <mat-divider></mat-divider>
 <br>
       <app-registered-users *ngIf="component === 0" ></app-registered-users>
-       
+      <app-pending-users *ngIf="component === 1" ></app-pending-users>
+    
 <br>
