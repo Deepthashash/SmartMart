@@ -3,12 +3,14 @@
         <div class="header">
          <a class="User" *ngIf=(UserName$)  as username>{{username}}</a>    
         </div>
-        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
+        <!--<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">-->
+        <span>  <img src="assets/smart.png" ></span>
+       
     </div>
 
     <mat-divider></mat-divider>
 
-    <h2 matSubheader>Pages</h2>
+    
     <a mat-list-item routerLinkActive="list-item-active" (click)="fireEvent(0)">Reports</a>
     <a mat-list-item routerLinkActive="list-item-active" (click)="fireEvent(1)">Users</a>
     <a mat-list-item routerLinkActive="list-item-active" (click)="fireEvent(2)">Products</a>

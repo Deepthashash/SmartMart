@@ -1,9 +1,19 @@
-<div>
-    <form class="form-inline my-2 my-lg-0">
-        <div class="text">
-            <h1>{{name}}</h1>
-        </div>
-         
+<body>
+    
+
+    <div>
+        <form class="form-inline my-2 my-lg-0">
+            <h1><b>REGISTERD USERS</b></h1>
+            <div style="position: absolute;
+            top: 20px;
+            right: 100px;">
+            <button type="button" class="btn btn-outline-primary btn-lg" (click)="selectComponent(0)">Registered Users</button>
+            </div>
+            <div style="position: absolute;
+            top: 20px;
+            right: 300px;">
+            <button type="button" class="btn btn-outline-primary btn-lg" (click)="selectComponent(1)">Pending Users</button>
+            </div>
          
         <!-- <div style="position: absolute;
         top: 25px;
