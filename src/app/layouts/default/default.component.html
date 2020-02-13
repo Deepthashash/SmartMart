@@ -5,10 +5,12 @@
         <app-sidebar (childEvent)="selectedComponent=$event"></app-sidebar>
     </mat-drawer>
     <mat-drawer-content>
+        <app-reports *ngIf="selectedComponent === 0"></app-reports>
         <app-users *ngIf="selectedComponent === 1" ></app-users>
         <app-products *ngIf="selectedComponent === 2" ></app-products>
         <app-promotions *ngIf="selectedComponent === 3" ></app-promotions>
         <app-feedback *ngIf="selectedComponent === 4" ></app-feedback>
+         
     </mat-drawer-content>
 </mat-drawer-container>
 

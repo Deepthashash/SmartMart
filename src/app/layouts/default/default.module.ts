@@ -31,6 +31,9 @@ import { NavBarComponent } from 'src/app/modules/preorder/subComponents/nav-bar/
 import { PendingPreordersComponent } from 'src/app/modules/preorder/subComponents/pending-preorders/pending-preorders.component';
 import { DialogComponent } from 'src/app/modules/preorder/subComponents/dialog/dialog.component';
 import { AcceptedPreordersComponent } from 'src/app/modules/preorder/subComponents/accepted-preorders/accepted-preorders.component';
+ 
+import { ReportsComponent } from 'src/app/modules/reports/reports.component';
+ 
 
 @NgModule({
   declarations: [
@@ -52,6 +55,9 @@ import { AcceptedPreordersComponent } from 'src/app/modules/preorder/subComponen
     PendingPreordersComponent,
     AcceptedPreordersComponent,
     DialogComponent,
+ 
+    ReportsComponent
+ 
   ],
   entryComponents:[
     DailogBodyComponent,
