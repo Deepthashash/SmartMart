@@ -1,3 +1,34 @@
-.text{
-    color: plum;
+body{
+    background-color: darkgrey;
+  
 }
+h1{
+    color: darkred;
+    margin-left: 150px;
+    margin-top: 30px;
+    font-size: 50px;
+}
+button{
+    position: absolute;
+    width: 180px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.541); 
+    margin-top: 50px;
+    margin-left: -90px;
+    padding: 2px 30px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    color:white;
+    border: black;
+}
+
+button:hover {
+    background-color:cadetblue;
+    color: white;
+    border: black;
+  }

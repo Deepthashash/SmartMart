@@ -1,0 +1,36 @@
+
+table {
+    border-collapse: collapse;
+    width: 1100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color:rgba(0, 0, 0, 0.651);
+    opacity: 10.0;
+    color: white;
+    
+  }
+   .btn1{
+       background-color:cadetblue;
+       border: white;
+       border-radius: 2px;
+       border-width: thick;
+       
+   }
+  .btn1:hover{
+    background-color: burlywood;
+    color :black;
+    border:white;
+  }
+  .btn2{
+    background-color:brown;
+    border: white;
+    border-radius: 2px;
+    border-width: thick;
+    
+}
+.btn2:hover{
+ background-color:burlywood;
+ color :black;
+ border:white;
+}
+ 
