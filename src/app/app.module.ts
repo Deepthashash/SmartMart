@@ -11,10 +11,12 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { RouteGuardService } from './route-guard.service';
+ 
 
 @NgModule({
   declarations: [
     AppComponent,
+     
     
   ],
   imports: [

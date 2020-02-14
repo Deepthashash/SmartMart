@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private firestore: AngularFirestore, private service: LoginService, private router: Router, private toastr: ToastrService) { }
 
-  details: Login;
+  details: Login[];
   username: string;
   pass: string;
   loginForm = new FormGroup({
@@ -26,19 +26,24 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
   
   onLogin(form){
-    this.firestore.doc('admin/'+form.userName || 'emp/'+form.userName).get().subscribe(
-      res => {
-         console.log(res.get('userName'));
-         this.username = res.get('userName');
-         this.pass = res.get('password');          
-      }
-    );
+    this.firestore.collection('OtherUsers', ref => ref.where('userName', '==', form.userName,).where('password', '==', form.password,)).snapshotChanges().subscribe(actionArray => {
+      this.details = actionArray.map(item => {
+        return{
+          id: item.payload.doc.id, 
+          ...item.payload.doc.data(),
+        } as Login;
+      })
+    })
       
   
 
-    if(this.pass = form.password){
-      if(this.username = 'admin/'+form.userName )
-      this.router.navigateByUrl('dash');
+    if(this.details.length > 0){
+      if(this.details[0].userType == 1 ){
+        this.router.navigateByUrl('dash');
+      }else{
+        this.router.navigateByUrl('preOrder');
+      }
+
     }else{
       this.toastr.error("Wrong credentials!");
     }

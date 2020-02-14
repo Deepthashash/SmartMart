@@ -28,10 +28,10 @@ export class ProductsService{
     }
 
     getpreOrders(){
-        return this.firestore.collection('PreOrders', ref => ref.where('completed', '==', false)).snapshotChanges();
+        return this.firestore.collection('PreOrders', ref => ref.where('pending', '==', true)).snapshotChanges();
     }
 
     getCompletedPreOrders(){
-        return this.firestore.collection('PreOrders', ref => ref.where('completed', '==', true)).snapshotChanges();
+        return this.firestore.collection('PreOrders', ref => ref.where('pending', '==', false)).snapshotChanges();
     }
 }

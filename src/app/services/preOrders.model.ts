@@ -1,10 +1,10 @@
 export class PreOrders{
     docId: string;
-    BillAmount: number;
-    amount: [];
+    totalPrice: number;
     brand: [];
-    pending: number;
+    pending: boolean;
     price: [];
     quantity: [];
     userId: string;
+    completed: boolean;
 }
