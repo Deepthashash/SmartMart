@@ -17,7 +17,7 @@ import { UpdateDialogComponent } from 'src/app/modules/update-dialog/update-dial
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { ToastrModule } from 'ngx-toastr';
 import { UsersComponent } from 'src/app/modules/users/users.component';
-import { PendingUsersComponent } from 'src/app/modules/pending-users/pending-users.component';
+ 
 import { RegisteredUsersComponent } from 'src/app/modules/registered-users/registered-users.component';
 import { PromotionsComponent } from 'src/app/modules/promotions/promotions.component';
 import { PromotionsDialogComponent } from 'src/app/modules/promotions-dialog/promotions-dialog.component';
@@ -33,6 +33,9 @@ import { DialogComponent } from 'src/app/modules/preorder/subComponents/dialog/d
 import { AcceptedPreordersComponent } from 'src/app/modules/preorder/subComponents/accepted-preorders/accepted-preorders.component';
  
 import { ReportsComponent } from 'src/app/modules/reports/reports.component';
+import { UsersDialogComponent } from 'src/app/modules/users-dialog/users-dialog.component';
+import { SystemUserComponent } from 'src/app/modules/system-user/system-user.component';
+import { UserUpdateDialogComponent } from 'src/app/modules/user-update-dialog/user-update-dialog.component';
  
 
 @NgModule({
@@ -44,7 +47,7 @@ import { ReportsComponent } from 'src/app/modules/reports/reports.component';
     DailogBodyComponent,
     UpdateDialogComponent,
     UsersComponent,
-    PendingUsersComponent,
+     
     RegisteredUsersComponent,
     PromotionsComponent,
     PromotionsDialogComponent,
@@ -55,15 +58,18 @@ import { ReportsComponent } from 'src/app/modules/reports/reports.component';
     PendingPreordersComponent,
     AcceptedPreordersComponent,
     DialogComponent,
- 
-    ReportsComponent
+    UsersDialogComponent,
+    ReportsComponent,
+    SystemUserComponent
  
   ],
   entryComponents:[
     DailogBodyComponent,
     UpdateDialogComponent,
     PromotionsDialogComponent,
-    DialogComponent
+    DialogComponent,
+    UsersDialogComponent,
+    UserUpdateDialogComponent
   ],
   imports: [
     CommonModule,
