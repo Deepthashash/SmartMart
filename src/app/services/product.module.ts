@@ -4,3 +4,9 @@ export class Barcode{
     price: number;
     stock: number;
 }
+
+export class OtherUsers{
+    userName: String;
+    passowrd: String;
+
+} 

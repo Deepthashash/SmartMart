@@ -23,6 +23,6 @@ export class UsersComponent implements OnInit {
     if(this.component == 0)
       this.name = "Registered Users";
     else
-      this.name = "Pending Users"
+      this.name = "System Users"
   }
 }
