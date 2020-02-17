@@ -1,4 +1,4 @@
-body {
+/*body {
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     background-color: rgb(109, 108, 107);
@@ -106,4 +106,149 @@ button{
     font-weight: bold;
     font-size: 18px;
 
+}
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.fintechfutures.com%2F2016%2F10%2Fmobile-payments-roundup-chase-pay-and-cvs-expand-their-programs%2F&psig=AOvVaw2jAKPhIuRY2xMKff_twBl6&ust=1581931019111000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCODBw9je1ecCFQAAAAAdAAAAABAK);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Roboto' ,sans-serif;
+
+}
+
+.app-header{
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);;
+}
+.login-wrapper{
+    height: 100%;
+}
+.positronx{
+    text-decoration: none;
+    color: #ffffff;
+}
+.box{
+    width: 320px;
+    height: 380px;
+    position: relative;
+    margin-top: 150px;
+    opacity: 1;
+    float: left;
+    width: 100%;
+    background: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    transform: scale(1);
+    -webkit-transform:scale(1);
+    -ms-transform:scale(1);
+    z-index:5;
+    max-width: 330px;
+}
+.avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: -15%;
+    left: 31%;
+}
+
+.login-wrapper .example-form{
+    min-width: 100%;
+    font-size: 14px;
+    color: yellow;
+}*/
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("/assets/6.jpg");
+    background-size: cover;
+
+}
+
+.login-box{
+    width: 320px;
+    height: 420px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    top: 50%;
+    left: 75%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 20px;;
+}
+.admin{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    left: 35%;
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.login-box p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.login-box input[type="text"],input[ype="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.login-box input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1c8adb;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.login-box input[type="submit"]:hover{
+    cursor: pointer;
+    background:darkcyan;
+    color: #000;
+}
+.login-box input :focus ~ label
+{
+    top: -18px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
+}
+
+.login-box a:hover
+{
+    color: darkcyan;
 }
