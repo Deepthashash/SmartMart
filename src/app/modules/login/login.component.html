@@ -66,11 +66,11 @@
    <div class="login-box">
       <img src="assets/admin.png" class="admin">
       <h1>Log in Here</h1>
-      <form>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
          <p>Username</p>
-         <input type="text" name="username" placeholder="Enter Username">
+         <input type="text" name="username" placeholder="Enter Username" formControlName="userName">
          <p>Password</p>
-         <input type="text" name="password" placeholder="Enter Password">
+         <input type="password" name="password" placeholder="Enter Password" formControlName="password">
          <input type="submit" name="submit" value="Login">
    
       </form>
