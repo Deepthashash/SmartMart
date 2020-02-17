@@ -24,7 +24,7 @@ export class DialogComponent implements OnInit {
 
   accept(id){
 
-    this.firestore.doc('PreOrders/'+id).update({ "pending": 1});
+    this.firestore.doc('PreOrders/'+id).update({ "pending": false});
   }
 
 }

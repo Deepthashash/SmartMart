@@ -2,6 +2,7 @@
     <thead>
       <tr>
         <th scope="col">User Id</th>
+        <th scope= "col">User Name</th>
         <th scope="col">Email</th>
         <th scope="col">NIC</th>
         <th scope="col">Card Number</th>
@@ -11,9 +12,10 @@
     <tbody>
       <tr *ngFor="let users of details">
         <td>{{users.userId}}</td>
+        <td>{{users.profname}}</td>
         <td>{{users.email}}</td>
-        <td>{{users.NIC}}</td>
-        <td>{{users.Nexus}}</td>
+        <td>{{users.nic}}</td>
+        <td>{{users.loyaltyCard}}</td>
         <!--<td>{{users.wallet_balance}}</td>-->
            
         <!--<td><button type="button" class="btn btn-outline-danger" (click)="onDelete(users.email)">Delete</button></td>-->

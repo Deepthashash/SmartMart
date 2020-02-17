@@ -27,4 +27,8 @@ export class AcceptedPreordersComponent implements OnInit {
     })
   }
 
+  onComplete(id){
+    this.db.doc("PreOrders/"+id).update({"completed": true})
+  }
+
 }

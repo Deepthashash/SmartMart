@@ -15,7 +15,8 @@ export class DailogBodyComponent implements OnInit {
     barcode: new FormControl(''),
     productName: new FormControl(''),
     unitPrice: new FormControl(''),
-    stock: new FormControl(''),  
+    stock: new FormControl(''),
+    reOrderLevel: new FormControl('')
   });
   
   onClick(formData){
@@ -23,6 +24,7 @@ export class DailogBodyComponent implements OnInit {
         brand: formData.productName ,
         price: Number( formData.unitPrice),
         stock: Number( formData.stock),
+        reOrderLevel: Number( formData.reOrderLevel)
      }).then( res => { 
        console.log('submitted');
      }, err=> {

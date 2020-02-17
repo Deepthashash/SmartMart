@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Products Update</h1>
+<!-- <h1 mat-dialog-title>Products Update</h1>
 <mat-dialog-content> 
     <div *ngIf="currentUpload">
         <div class="progress">
@@ -17,5 +17,44 @@
       
             Upload Single
           </button>
+          <form #form="ngForm" (submit)="onUpdate(form)">
+            <div class = "form-group">
+                <label>Date</label>
+                <input type="text" name="barcode" class="form-control" #brand="ngModel">
+            </div>
+               <button class="btn btn-primary" type="submit" mat-dialog-close> Submit </button>
+               <button class="btn btn-primary" type="reset" mat-dialog-close> Clear </button>            
+        </form>
+</mat-dialog-content>
       
-      
+       -->
+       <h1 mat-dialog-title>Products Update</h1>
+<mat-dialog-content> 
+    <form #form="ngForm" (submit)="onSubmit(form)">
+        <div class = "form-group">
+            <label>Barcode number</label>
+            <input name="barcode" class="form-control" #barcode="ngModel" [(ngModel)]="service.formData.barcodeNumber">
+        </div>
+        <div class="form-group">
+            <label>Product Name</label>
+            <input name="brand" class="form-control" #brand="ngModel" [(ngModel)]="service.formData.brand">
+        </div>
+        <div class="form-group">
+               <label>Unit Price</label> 
+               <input name="price" class="form-control"  [(ngModel)]="service.formData.price">
+        </div>
+        <div class="form-group">
+            <label>Starting Date</label> 
+            <input type="date" name="startDate" class="form-control" #date="ngModel" [(ngModel)]="service.formData.startDate">
+        </div>
+        <div class="form-group">
+            <label>End Date</label> 
+            <input type="date" name="endDate" class="form-control" #date="ngModel" [(ngModel)]="service.formData.endDate">
+        </div>
+     
+     
+        
+         <br/>
+           <button class="btn btn-primary" type="submit" mat-dialog-close> Submit </button>
+              <button class="btn btn-primary" type="reset" mat-dialog-close> Clear </button>            
+    </form>

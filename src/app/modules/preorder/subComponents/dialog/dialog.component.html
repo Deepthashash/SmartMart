@@ -1,18 +1,22 @@
 <h1 mat-dialog-title>Accept Preorder?</h1>
 <mat-dialog-content> 
     <p>{{service.formPre.totalPrice}}</p>
-    <div *ngFor="let br of service.formPre.brand">
-        <div *ngFor="let pr of service.formPre.price">
+    <div *ngFor="let br of service.formPre.brand; let pr of service.formPre.price">
+        <!-- <div *ngFor="let pr of service.formPre.price">
             <tr *ngFor="let am of service.formPre.quantity">
                     <td>{{br}} {{pr}} {{am}}</td>
             </tr>
-        </div>
+        </div> -->
+        {{br}} {{pr}}
     </div>
+    <!-- <div *ngFor="let pr of service.formPre.price">
+        {{pr}}
+    </div> -->
    
      
 </mat-dialog-content>
 <mat-dialog-actions>
-    <button class="btn btn-primary" margin-left = 12px mat-dialog-close>Decline</button>
+    <button class="btn btn-primary" type="submit" margin-left = 12px mat-dialog-close>Decline</button>
     <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
-    <button class = "btn btn-primary" margin-left = 12px  mat-dialog-close (click)="accept(service.formPre.docId)">Accept</button>
+    <button class = "btn btn-primary" type="submit" margin-left = 12px  mat-dialog-close (click)="accept(service.formPre.docId)">Accept</button>
 </mat-dialog-actions>
