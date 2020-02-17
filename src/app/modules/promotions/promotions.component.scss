@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(173, 173, 173);
+    background-position:center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    
+  }
+  
+  h1{
+    padding-left: 350px;
+    padding-top: 40px;
+    color: darkred;
+    font-weight: bold;
+    font-size: 60px;
+  }
+.btn-outline-danger{
+    margin-left: 15px;
+}
+
+.btn-outline-success{
+    margin-left: 15px;
+}
+table {
+    border-collapse: collapse;
+    width: 1100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color:rgba(0, 0, 0, 0.651);
+    opacity: 10.0;
+    color: white;  
+  }

@@ -34,8 +34,11 @@
             <td>{{pro.barcodeNumber}}</td>
             <td>{{pro.brand}}</td>
             <td>{{pro.price}}</td>
-            <td><button type="button" class="btn btn-outline-primary" (click)="openUpdateDialog(pro)">Update</button>  
+            <!--<td><button type="button" class="btn btn-outline-primary" (click)="openUpdateDialog(pro)">Update</button>  
               <button type="button" class="btn btn-outline-danger" (click)="onDelete(pro.barcodeNumber)">Delete</button>
+            </td>-->
+            <td><button type="button" class="btn"id="btn-update"  (click)="openUpdateDialog(pro)">Update</button>  
+              <button type="button" class="btn" id="btn-delete"  (click)="onDelete(pro.barcodeNumber)">Delete</button>
             </td>
           </tr>
         </tbody>
