@@ -4,7 +4,7 @@ import {OtherUsers} from 'src/app/services/sysusers.model';
 import { ProductsService } from 'src/app/services/products.service';
 import { MatDialog } from '@angular/material';
 import { UsersDialogComponent} from '../users-dialog/users-dialog.component';
-import { UserUpdateDialogComponent} from '../user-update-dialog/user-update-dialog.component';
+//import { UserUpdateDialogComponent} from '../user-update-dialog/user-update-dialog.component';
 @Component({
   selector: 'app-system-user',
   templateUrl: './system-user.component.html',
@@ -30,11 +30,11 @@ export class SystemUserComponent implements OnInit {
     this.dialog.open(UsersDialogComponent);
   }
 
-  openUpdateDialog(details:OtherUsers){
+  /*openUpdateDialog(details:OtherUsers){
     // console.log(details);
     this.dialog.open(UserUpdateDialogComponent,{
       data: details,
     });
-  }
+  }*/
 
 }
