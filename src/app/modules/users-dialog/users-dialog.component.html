@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Enter details</h1>
+<mat-dialog-content> 
+    <form [formGroup]="usersAddForm" (ngSubmit)="onClick(usersAddForm.value)" >
+        <div class = "form-group">
+            <label>User Name</label>
+            <input type="text" class="form-control" formControlName="UserName">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="text"class="form-control" formControlName="Password">
+        </div>
+        <br/>
+        <button class="btn btn-primary" type="submit" mat-dialog-close> Submit </button>
+        <button class="btn btn-primary" type="reset" mat-dialog-close> Clear </button> 
+    </form>

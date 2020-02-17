@@ -15,13 +15,9 @@ export class UpdateDialogComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data: Barcode,private service: ProductsService,private firestore: AngularFirestore, ) { 
 
     this.service.formData = Object.assign({},data);
-    // console.log(service.formData.barcodeNumber);
+     
   }
-  // productsUpdateForm = new FormGroup({
-  //   barcode: new FormControl(''),
-  //   productName: new FormControl(''),
-  //   unitPrice: new FormControl(''),  
-  // });
+   
 
   
   ngOnInit() {

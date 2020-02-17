@@ -63,9 +63,7 @@ export class ProductsComponent implements OnInit {
     }
   }
 
-  openDialog(){
-    this.dialog.open(DailogBodyComponent);
-  }
+   
   
   openUpdateDialog(details:Barcode){
     // console.log(details);

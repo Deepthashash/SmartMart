@@ -12,15 +12,10 @@
             <div style="position: absolute;
             top: 20px;
             right: 300px;">
-            <button type="button" class="btn btn-outline-primary btn-lg" (click)="selectComponent(1)">Pending Users</button>
+            <button type="button" class="btn btn-outline-primary btn-lg" (click)="selectComponent(1)">System Users</button>
             </div>
          
-        <!-- <div style="position: absolute;
-        top: 25px;
-        right: 300px;">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search products" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </div> -->
+         
     </form>
 </div>
 
@@ -29,5 +24,6 @@
 <mat-divider></mat-divider>
 <br>
       <app-registered-users *ngIf="component === 0" ></app-registered-users>
+      <app-system-user *ngIf="component === 1" ></app-system-user>
        
 <br>
