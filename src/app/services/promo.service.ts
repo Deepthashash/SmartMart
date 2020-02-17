@@ -11,6 +11,6 @@ export class PromoService{
     constructor(private firestore:AngularFirestore){}
 
     getPromo(){
-        return this.firestore.collection('Barcode_details').snapshotChanges();
+        return this.firestore.collection('Promotions').snapshotChanges();
     }
 }

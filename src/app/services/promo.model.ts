@@ -1,6 +1,9 @@
 export class Promo{
-    barcode: any;
-    brand: any;
-    price: any;
-
+    barcode: string;
+    brand: string;
+    price: number;
+    startdate: number;
+    endDate: number;
+    status: string;
+    initialPrice: number;
 }

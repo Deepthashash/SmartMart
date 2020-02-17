@@ -13,6 +13,16 @@
                <label>Unit Price</label> 
                <input name="price" class="form-control" #price="ngModel" [(ngModel)]="service.formData.price">
         </div>
+        <div class="form-group">
+            <label>Stock</label> 
+            <input name="stock" class="form-control" #stock="ngModel" [(ngModel)]="service.formData.stock">
+        </div>
+        <div class="form-group">
+            <label>Re-order Level</label> 
+            <input name="reOrderLevel" class="form-control" #reOrderLevel="ngModel" [(ngModel)]="service.formData.reOrderLevel">
+        </div>
+     
+     
         
          <br/>
            <button class="btn btn-primary" type="submit" mat-dialog-close> Submit </button>

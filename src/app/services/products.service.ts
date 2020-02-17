@@ -19,6 +19,10 @@ export class ProductsService{
         return this.firestore.collection('Barcode_details').snapshotChanges();
     }
 
+    getProduct(){
+        return this.firestore.collection('Barcode_details').get();
+    }
+
     getFeedBack(){
         return this.firestore.collection('Rating').snapshotChanges();        
     }

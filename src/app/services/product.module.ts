@@ -3,4 +3,5 @@ export class Barcode{
     brand: String;
     price: number;
     stock: number;
+    reOrderLevel: number;
 }

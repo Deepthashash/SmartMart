@@ -1,45 +1,19 @@
-<div>
-    <form class="form-inline my-2 my-lg-0">
-        <h1>Promotions</h1>
-        <div style="position: absolute;
-        top: 20px;
-        right: 30px;">
-        <button type="button" class="btn btn-outline-primary btn-lg" (click)="openDialog()">Add + </button>
-        </div>
-        <div style="position: absolute;
-        top: 25px;
-        right: 150px;">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search promotions" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </div>
-    </form>
+<h1>Promotions</h1>
+<div *ngFor="let data of details">
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{data.brand}}</mat-card-title>
+      <mat-card-subtitle>Promotion Price: {{data.price}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Status: {{data.status}}</p>
+      <p>Start Date: {{data.startDate | date: 'yyyy-MM-dd'}}</p>
+      <p>End Date: {{data.endDate | date: 'yyyy-MM-dd'}}</p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button (click)="onDelete(data)">Delete</button>
+    </mat-card-actions>
+  </mat-card>
 </div>
-
-<br>
-
-<mat-divider></mat-divider>
-<br>
-<table class="table table-hover table-dark">
-        <thead>
-          <tr>
-            <th scope="col">Barcode</th>
-            <th scope="col">Product Name</th>
-            <th scope="col">Product price</th>
-            <th scope="col">Status</th>
-            <th scope="col">Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let pro of details">
-            <td>{{pro.barcodeNumber}}</td>
-            <td>{{pro.brand}}</td>
-            <td>{{pro.price}}</td>
-            <td><button type="button" class="btn btn-outline-primary" (click)="openUpdateDialog(pro)">Update</button>  
-              <button type="button" class="btn btn-outline-danger" (click)="onDelete(pro.barcodeNumber)">Delete</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-    
-<br>
+  
