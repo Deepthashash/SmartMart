@@ -57,6 +57,10 @@ export class ProductsComponent implements OnInit {
     })
   }
 
+  openDialog(){
+    this.dialog.open(DailogBodyComponent);
+  }
+
   statusCheck(pro){
     if(pro.reOrderLevel > pro.stock){
       console.log("hi");
