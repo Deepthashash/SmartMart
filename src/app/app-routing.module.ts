@@ -13,12 +13,12 @@ const routes: Routes = [
   { path: '',
   redirectTo:'/login', pathMatch: 'full'},
   { path: 'login',
-  component: LoginComponent},
+  component: LoginComponent,},
   { path: 'preOrder',
   component: PreorderComponent,},
   {
   path: 'dash',
-  component: DefaultComponent,
+  component: DefaultComponent, canActivate:[RouteGuardService]
   // canActivate: [RouteGuardService], data: {role: '1'}
   // {path: '',component: LoginComponent},
   // {path: 'dashboard',component: DefaultComponent}  

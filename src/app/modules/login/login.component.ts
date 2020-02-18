@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { LoginService } from 'src/app/services/login.service';
-import { NgForm, FormGroup, FormControl } from '@angular/forms';
+import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Login } from 'src/app/services/login.model';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -19,8 +19,8 @@ export class LoginComponent implements OnInit {
   username: string;
   pass: string;
   loginForm = new FormGroup({
-    userName: new FormControl(''),
-    password: new FormControl(''),
+    userName: new FormControl('',Validators.required),
+    password: new FormControl('',Validators.required),
   });
 
   ngOnInit() {}
@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
     if(this.details.length > 0){
       if(this.details[0].userType == 1 ){
         this.router.navigateByUrl('dash');
+        localStorage.setItem('userType','0')
       }else{
         this.router.navigateByUrl('preOrder');
       }

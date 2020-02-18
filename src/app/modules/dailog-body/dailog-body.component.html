@@ -3,26 +3,41 @@
     <form [formGroup]="productsAddForm" (ngSubmit)="onClick(productsAddForm.value)" >
         <div class = "form-group">
             <label>Barcode number</label>
-            <input type="text" class="form-control" formControlName="barcode">
+            <input type="text" class="form-control" formControlName="barcode" [ngClass]="{'is-invalid':productsAddForm.get('barcode').touched && productsAddForm.get('barcode').invalid}">
+            <div class="invalid-feedback">
+                <div>Barcode is required</div>
+            </div>
         </div>
         <div class="form-group">
             <label>Product Name</label>
-            <input type="text"class="form-control" formControlName="productName">
+            <input type="text"class="form-control" formControlName="productName" [ngClass]="{'is-invalid':productsAddForm.get('productName').touched && productsAddForm.get('productName').invalid}">
+            <div class="invalid-feedback">
+                <div>Product name is required</div>
+            </div>    
         </div>
         <div class="form-group">
                <label>Unit Price</label> 
-               <input type=""class="form-control" formControlName="unitPrice">
-        </div>
+               <input type=""class="form-control" formControlName="unitPrice" [ngClass]="{'is-invalid':productsAddForm.get('unitPrice').touched && productsAddForm.get('unitPrice').invalid}">
+               <div class="invalid-feedback">
+                <div>Unit price is required</div>
+            </div>
+            </div>
         <div class="form-group">
             <label>Stock</label> 
-            <input type=""class="form-control" formControlName="stock">
+            <input type=""class="form-control" formControlName="stock" [ngClass]="{'is-invalid':productsAddForm.get('stock').touched && productsAddForm.get('stock').invalid}">
+            <div class="invalid-feedback">
+                <div>Stock is required</div>
+            </div>
         </div>
         <div class="form-group">
             <label>Re-order Level</label> 
-            <input type=""class="form-control" formControlName="reOrderLevel">
+            <input type=""class="form-control" formControlName="reOrderLevel" [ngClass]="{'is-invalid':productsAddForm.get('reOrderLevel').touched && productsAddForm.get('reOrderLevel').invalid}">
+            <div class="invalid-feedback">
+                <div>Re-Order level is required</div>
+            </div>
         </div>
         
          <br/>
-           <button class="btn btn-primary" type="submit" mat-dialog-close> Submit </button>
+           <button class="btn btn-primary" type="submit" mat-dialog-close [disabled]="!productsAddForm.valid"> Submit </button>
            <button class="btn btn-primary" type="reset" mat-dialog-close> Clear </button>            
     </form>

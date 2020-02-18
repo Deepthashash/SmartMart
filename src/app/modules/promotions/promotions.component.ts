@@ -45,10 +45,10 @@ export class PromotionsComponent implements OnInit {
   onDelete(fdata){
     let formdata = fdata.value;
     if(confirm("Are you sure, you want to delete this?")){
-      this.db.doc("Barcode_details/"+formdata.barcode).update({
-        price: formdata.initialPrice,
+      this.db.doc("Barcode_details/"+fdata.barcode).update({
+        price: fdata.initialPrice,
       })
-      this.db.doc('Promotions/'+formdata.barcode).delete();
+      this.db.doc('Promotions/'+fdata.barcode).delete();
     }
   }
 

@@ -11,10 +11,10 @@ export class RouteGuardService implements CanActivate {
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 
-    if ( localStorage.getItem('displayName') === next.data.role ) {
+    if ( localStorage.getItem('userType') === "0" ) {
       return true;
     } else {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/login']);
     }
 
   }

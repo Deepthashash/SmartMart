@@ -45,11 +45,11 @@
         </div>
         <div class="form-group">
             <label>Starting Date</label> 
-            <input type="date" name="startDate" class="form-control" #date="ngModel" [(ngModel)]="service.formData.startDate">
+            <input type="date" min="2020-02-18" name="startDate" class="form-control" #date="ngModel" [(ngModel)]="service.formData.startDate">
         </div>
         <div class="form-group">
             <label>End Date</label> 
-            <input type="date" name="endDate" class="form-control" #date="ngModel" [(ngModel)]="service.formData.endDate">
+            <input type="date" min="2020-02-18" name="endDate" class="form-control" #date="ngModel" [(ngModel)]="service.formData.endDate">
         </div>
      
      

@@ -1,25 +1,21 @@
-<div class="pending-form-text">
+<div class="accept-form-text">
   <a>Pending Pre Orders</a>
 </div>
 <div *ngFor="let data of details">
 <mat-card class="example-card" (click)="onTap(data)">
     <mat-card-header>
-      <!-- <div mat-card-avatar class="example-header-image"></div> -->
-      <mat-card-title>New Order</mat-card-title>
+      <!-- <div mat-card-avatar class="example-header-image"></div> -->           
+      
       <mat-card-subtitle>
-        <strong>Order number:</strong> {{data.docId}}
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-          <strong>Total:</strong> {{data.totalPrice}}
-        </p>
-    </mat-card-content>
-    <mat-card-actions align="end">
-      <div *ngIf="data.pending === 1">
-        <button mat-raised-button (click)="onComplete(data.docId)">Accept</button>
-      </div>
-    </mat-card-actions>
+          <strong>Order number:</strong> {{data.docId}}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+            <strong>Total:</strong> {{data.totalPrice}}
+          </p>
+      </mat-card-content>
   </mat-card>
+  <br><br>
 </div>
   

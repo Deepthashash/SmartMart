@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ToastrService } from 'ngx-toastr';
 
@@ -12,9 +12,9 @@ export class UsersDialogComponent implements OnInit {
 
   constructor(private afs: AngularFirestore,private toastr: ToastrService) { }
   usersAddForm = new FormGroup({
-    UserName: new FormControl(''),
-    Password: new FormControl(''),
-     
+    UserName: new FormControl('',Validators.required),
+    Password: new FormControl('',Validators.required),
+    Confirm_Password: new FormControl('',Validators.required),     
   });
 
   onClick(formData){

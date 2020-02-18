@@ -4,6 +4,7 @@ import { Barcode } from 'src/app/services/product.module';
 import { ProductsService } from 'src/app/services/products.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FormGroup, FormControl, NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-update-dialog',
@@ -12,7 +13,7 @@ import { FormGroup, FormControl, NgForm } from '@angular/forms';
 })
 export class UpdateDialogComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: Barcode,private service: ProductsService,private firestore: AngularFirestore, ) { 
+  constructor(@Inject(MAT_DIALOG_DATA) public data: Barcode,private service: ProductsService,private firestore: AngularFirestore, private toastr: ToastrService) { 
 
     this.service.formData = Object.assign({},data);
      
@@ -25,8 +26,13 @@ export class UpdateDialogComponent implements OnInit {
 
   onUpdate(form: NgForm){
     let formdata = form.value;
-    console.log(formdata.brand);
-    this.firestore.doc('Barcode_details/'+formdata.barcode).update(formdata);
+    console.log(formdata.price);
+    this.firestore.doc('Barcode_details/'+this.service.formData.barcodeNumber).update({
+      price: formdata.price,
+      stock: formdata.stock,
+      reOrderLevel: formdata.reOrderLevel
+    });
+    this.toastr.success("Succesfully Submitted!")
   }
 
 }

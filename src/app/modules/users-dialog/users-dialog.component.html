@@ -3,13 +3,26 @@
     <form [formGroup]="usersAddForm" (ngSubmit)="onClick(usersAddForm.value)" >
         <div class = "form-group">
             <label>User Name</label>
-            <input type="text" class="form-control" formControlName="UserName">
+            <input type="text" class="form-control" formControlName="UserName" [ngClass]="{'is-invalid':usersAddForm.get('UserName').touched && usersAddForm.get('UserName').invalid}">
+            <div class="invalid-feedback">
+                    <div>Username is required</div>
+            </div>
         </div>
         <div class="form-group">
             <label>Password</label>
-            <input type="text"class="form-control" formControlName="Password">
+            <input type="text"class="form-control" formControlName="Password" [ngClass]="{'is-invalid':usersAddForm.get('Password').touched && usersAddForm.get('Password').invalid}">
+            <div class="invalid-feedback">
+                    <div>Password is required</div>
+                </div>
         </div>
+        <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="text"class="form-control" formControlName="Confirm_Password" [ngClass]="{'is-invalid':usersAddForm.get('Confirm_Password').touched && usersAddForm.get('Confirm_Password').invalid}">
+                <div class="invalid-feedback">
+                        <div>Password is required</div>
+                    </div>
+            </div>
         <br/>
-        <button class="btn btn-primary" type="submit" mat-dialog-close> Submit </button>
+        <button class="btn btn-primary" type="submit" mat-dialog-close [disabled]="!usersAddForm.valid"> Submit </button>
         <button class="btn btn-primary" type="reset" mat-dialog-close> Clear </button> 
     </form>

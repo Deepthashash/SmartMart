@@ -20,9 +20,11 @@
 
     <mat-divider></mat-divider>
 
-    <h2 matSubheader>Tools</h2>
-
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+    <h1 matSubheader style="color: red;font-weight: bold;">Products Running Low on Storage</h1>
+    <ul *ngFor="let element of arr">
+        <li>{{element}}</li>
+    </ul>      
+    <!-- <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
         <mat-icon>import_contacts</mat-icon>
         Contacts
     </a>
@@ -30,6 +32,6 @@
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
         <mat-icon>contact_phone</mat-icon>
         Leads
-    </a>
+    </a> -->
 
 </mat-nav-list>

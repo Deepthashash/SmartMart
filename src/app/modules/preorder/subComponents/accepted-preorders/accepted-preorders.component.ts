@@ -3,6 +3,7 @@ import { PreOrders } from 'src/app/services/preOrders.model';
 import { MatDialog } from '@angular/material';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ProductsService } from 'src/app/services/products.service';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-accepted-preorders',
@@ -29,6 +30,13 @@ export class AcceptedPreordersComponent implements OnInit {
 
   onComplete(id){
     this.db.doc("PreOrders/"+id).update({"completed": true})
+  }
+
+  onTap(data:PreOrders){
+    // console.log(details);
+    this.dialog.open(DialogComponent,{
+      data: data,
+    });
   }
 
 }

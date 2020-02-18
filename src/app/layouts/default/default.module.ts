@@ -35,8 +35,8 @@ import { AcceptedPreordersComponent } from 'src/app/modules/preorder/subComponen
 import { ReportsComponent } from 'src/app/modules/reports/reports.component';
 import { UsersDialogComponent } from 'src/app/modules/users-dialog/users-dialog.component';
 import { SystemUserComponent } from 'src/app/modules/system-user/system-user.component';
+
 //import { UserUpdateDialogComponent } from 'src/app/modules/user-update-dialog/user-update-dialog.component';
- 
 
 @NgModule({
   declarations: [
@@ -95,7 +95,9 @@ import { SystemUserComponent } from 'src/app/modules/system-user/system-user.com
     ButtonsModule.forRoot(),
 
     BrowserAnimationsModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot()
+
+
   ],
   providers: [
     DashboardService,

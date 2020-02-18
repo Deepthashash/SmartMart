@@ -67,11 +67,22 @@
       <img src="assets/admin.png" class="admin">
       <h1>Log in Here</h1>
       <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
-         <p>Username</p>
-         <input type="text" name="username" placeholder="Enter Username" formControlName="userName">
-         <p>Password</p>
-         <input type="password" name="password" placeholder="Enter Password" formControlName="password">
-         <input type="submit" name="submit" value="Login">
+         <div>
+               <p>Username</p>
+               <input type="text" name="username" placeholder="Enter Username" formControlName="userName" [ngClass]="{'is-invalid':loginForm.get('userName').touched && loginForm.get('userName').invalid}">
+               <div class="invalid-feedback">
+                  <div>Username is required</div>
+              </div>
+         </div>
+         <div>
+               <p>Password</p>
+               <input type="password" name="password" placeholder="Enter Password" formControlName="password" [ngClass]="{'is-invalid':loginForm.get('password').touched && loginForm.get('password').invalid}">
+               <div class="invalid-feedback">
+                  <div>Password is required</div>
+              </div>
+         </div>
+         
+         <button value="Login" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
    
       </form>
    </div>

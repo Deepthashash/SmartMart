@@ -6,7 +6,7 @@
     <mat-card-header>
       <!-- <div mat-card-avatar class="example-header-image"></div> -->
       <div *ngIf="data.completed === true">
-          <mat-card-title>Order Accepted</mat-card-title>
+          <mat-card-title>Order is Completed</mat-card-title>
         </div>
         <div *ngIf="data.completed === false">
             <mat-card-title>Proceeding order</mat-card-title>
@@ -21,9 +21,10 @@
             <strong>Total:</strong> {{data.totalPrice}}
           </p>
       </mat-card-content>
-    <mat-card-actions>
+    <mat-card-actions *ngIf="data.completed === false">
         <button class="btn btn-primary" (click)="onComplete(data.docId)">Complete</button>
     </mat-card-actions>
   </mat-card>
+  <br><br>
 </div>
   

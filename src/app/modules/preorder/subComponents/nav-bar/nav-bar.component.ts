@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,13 +9,17 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class NavBarComponent implements OnInit {
 
   @Output() public childEvent =  new EventEmitter();
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   public fireEvent2(x: number){
     this.childEvent.emit(x);
+  }
+
+  logout(){
+    this.router.navigateByUrl('/login');
   }
 
 }

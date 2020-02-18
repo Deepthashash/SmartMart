@@ -14,7 +14,16 @@ export class DefaultComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    
+    //  firebase.firestore().collection('Barcode_details').where('reOrderLevel', '>', 'stock').get().then( array=>{
+    //   console.log('dvdfv');
+    //   console.log(array); 
+    //   array.forEach(element => {
+    //      console.log(element.data());
+    //    });
+    //  });
+   }
 
 
   sideBarToggler() {
