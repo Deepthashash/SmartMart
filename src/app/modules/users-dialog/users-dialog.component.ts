@@ -19,14 +19,15 @@ export class UsersDialogComponent implements OnInit {
 
   onClick(formData){
     this.afs.collection('OtherUsers/').add({
-       password: formData.Password ,
-        UserName:formData.UserName,
+      password: formData.Password ,
+      userName:formData.UserName,
+      userType: 0
     }).then( res => { 
-      console.log('submitted');
+      this.toastr.success("Succesfully Submitted!");
     }, err=> {
       console.log(err);
     });
-    this.toastr.success("Succesfully Submitted!");
+    
  }
   ngOnInit() {
   }

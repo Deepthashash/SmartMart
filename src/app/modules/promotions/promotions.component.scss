@@ -13,13 +13,6 @@ body{
     font-weight: bold;
     font-size: 60px;
   }
-.btn-outline-danger{
-    margin-left: 15px;
-}
-
-.btn-outline-success{
-    margin-left: 15px;
-}
 table {
     border-collapse: collapse;
     width: 1100px;
@@ -28,4 +21,17 @@ table {
     background-color:rgba(0, 0, 0, 0.651);
     opacity: 10.0;
     color: white;  
+  }
+  .btn{
+  background-color: rgb(19, 80, 82);
+  box-shadow: 0 5px 15px -5px #00000070;
+
+  }
+  #btn-delete{
+    background-color:brown;
+    color: white;
+  }
+  #btn-delete:hover{
+    background-color: rgb(19, 80, 82);
+    color: white;
   }

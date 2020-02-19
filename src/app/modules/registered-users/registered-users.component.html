@@ -6,6 +6,7 @@
         <th scope="col">Email</th>
         <th scope="col">NIC</th>
         <th scope="col">Card Number</th>
+        <th scope="col"></th>
         <!--<th scope="col">Wallet Balance</th>-->
       </tr>
     </thead>
@@ -19,7 +20,7 @@
            
         <!--<td><button type="button" class="btn btn-outline-danger" (click)="onDelete(users.email)">Delete</button></td>-->
         <td>
-          <button class = "btn2" type="button">Delete</button>
+          <button class = "btn" type="button" id="btn-delete" (click)="onDelete(users.email)">Delete</button>
         </td>
       </tr>
     </tbody>

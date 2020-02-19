@@ -13,29 +13,19 @@ body{
     font-weight: bold;
     font-size: 60px;
   }
-
-.btn-outline-danger{
-    margin-left: 15px;
-}
-
-.btn-outline-success{
-    margin-left: 15px;
-}
-
-table {
+  table {
     border-collapse: collapse;
-    width: 1100px;
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color:dimgray(0, 0, 0, 0.651);
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color:rgba(0, 0, 0, 0.651);
     opacity: 10.0;
-    color: white;  
+    color: white;
+    
   }
-
   th {
     font-size: 18px;
     color: rgb(255, 255, 255);
-    background-color: rgb(58, 122, 124);
+    background-color:  rgb(7, 99, 96) ;
   }
 
   .btn{
@@ -45,27 +35,24 @@ table {
     width: 108px;
     box-shadow: 0 5px 15px -5px #00000070;
   }
-
-  #btn-update:hover {
-    color: white;
-    background-color: midnightblue;
-  }
-  
   #btn-update {
     color: #ffffff;
-    background-color: rgb(19, 80, 82);
+    background-color:  rgb(6, 68, 66) ;
   }
-
+  #btn-update:hover {
+    color: white;
+    background-color: rgb(29, 29, 216);
+  }
+  
+  #btn-delete {
+    color: #ffffff;
+    background-color: rgb(6, 68, 66) ;
+  }
   #btn-delete:hover {
     color: white;
     background-color:brown;
   }
   
-  #btn-delete {
-    color: #ffffff;
-    background-color: rgb(19, 80, 82);
-  }
-
   #btn-promo:hover {
     color: white;
     background-color: olivedrab;
@@ -73,12 +60,12 @@ table {
   
   #btn-promo {
     color: #ffffff;
-    background-color: rgb(19, 80, 82);
+    background-color: rgb(6, 68, 66) ;
   }
 
   #btn-add:hover {
-    color: #0a4969;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: olivedrab;
   }
   
   #btn-add {
@@ -88,6 +75,7 @@ table {
 
   #search{
     box-shadow: 0 5px 15px -5px #00000070;
+    
   }
 
   

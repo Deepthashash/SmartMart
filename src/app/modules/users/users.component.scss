@@ -8,27 +8,24 @@ h1{
     margin-top: 30px;
     font-size: 50px;
 }
-button{
-    position: absolute;
-    width: 180px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: rgba(0, 0, 0, 0.541); 
-    margin-top: 50px;
-    margin-left: -90px;
-    padding: 2px 30px;
-    font-size: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,.5);
-    color:white;
-    border: black;
-}
 
-button:hover {
-    background-color:cadetblue;
-    color: white;
-    border: black;
+  .btn{
+    background-color:rgb(6, 68, 66) ;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
   }
+  #btn-registered{
+      background-color: rgb(6, 68, 66) ;
+      color: white;
+  }
+  #btn-registered:hover{
+      background-color: rgb(80, 145, 7);
+      color: white;
+  }
+  #btn-system{
+    background-color: rgb(6, 68, 66) ;
+    color: white;
+}
+#btn-system:hover{
+    background-color: rgb(80, 145, 7);
+    color: white;
+}

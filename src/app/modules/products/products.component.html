@@ -1,15 +1,15 @@
-<div>
+<body><div>
     <form class="form-inline my-2 my-lg-0">
         <h1>Products</h1>
         <div style="position: absolute;
-        top: 20px;
-        right: 30px;">
-        <button type="button" class="btn btn-outline-primary btn-lg"   margin (click)="openDialog()">Add + </button>
+        top: 70px;
+        right: 50px;">
+        <button type="button" class="btn" id="btn-add" margin (click)="openDialog()">Add + </button>
         </div>
         <div style="position: absolute;
-        top: 25px;
-        right: 150px;">
-        Search <input class="form-control mr-sm-2" type="search" placeholder="Search products" [(ngModel)]="brandName" name="first" (input)='search()'>
+        top: 75px;
+        right: 200px;">
+        <b>Search : </b><input class="form-control mr-sm-2" type="search" placeholder="Search products" [(ngModel)]="brandName" name="first" (input)='search()'>
         </div>
     </form>
 </div>
@@ -36,9 +36,9 @@
             <td>{{pro.price}}</td>
             <td>{{pro.stock}}</td>
             <td>{{pro.reOrderLevel}}</td>
-            <td><button type="button" class="btn btn-outline-primary" (click)="openUpdateDialog(pro)">Update</button>  
-              <button type="button"   class="btn btn-outline-danger" (click)="onDelete(pro.barcodeNumber)">Delete</button>
-              <button type="button"   class="btn btn-outline-success" (click)="onAddPromo(pro)">Add Promo</button>
+            <td><button type="button" class="btn" id="btn-update"(click)="openUpdateDialog(pro)">Update</button>  
+              <button type="button"   class="btn" id="btn-delete"(click)="onDelete(pro.barcodeNumber)">Delete</button>
+              <button type="button"   class="btn" id="btn-promo"(click)="onAddPromo(pro)">Add Promo</button>
 
             </td>
           </tr>
@@ -47,3 +47,4 @@
 
     
 <br>
+</body>
