@@ -1,7 +1,6 @@
 
 table {
-    // border-collapse: collapse;
-    // width: 00px;
+    border-collapse: collapse;
     margin-left: 2px;
     margin-right: 2px;
     background-color:rgba(0, 0, 0, 0.651);
@@ -9,28 +8,27 @@ table {
     color: white;
     
   }
-   .btn1{
-       background-color:cadetblue;
+  th {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color:  rgb(7, 99, 96) ;
+  }
+   .btn{
+       background-color: rgb(6, 68, 66) ;
+       color :white;
        border: white;
        border-radius: 2px;
        border-width: thick;
        
    }
-  .btn1:hover{
-    background-color: burlywood;
-    color :black;
-    border:white;
+   #btn-delete{
+    background-color: brown;
+    color: white;
   }
-  .btn2{
-    background-color:brown;
-    border: white;
-    border-radius: 2px;
-    border-width: thick;
+  #btn-delete:hover{
+    background-color: rgb(6, 68, 66) ;
+    color : white;
     
-}
-.btn2:hover{
- background-color:burlywood;
- color :black;
- border:white;
-}
+  }
+  
  

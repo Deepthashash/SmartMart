@@ -1,4 +1,4 @@
-<h1>Promotions</h1>
+<body><h1>Promotions</h1>
 <div *ngFor="let data of details">
 <mat-card class="example-card">
     <mat-card-header>
@@ -12,12 +12,12 @@
       <p>End Date: {{data.endDate | date: 'yyyy-MM-dd'}}</p>
     </mat-card-content>
     <mat-card-actions align="end">
-      <button mat-button (click)="onDelete(data)">Delete</button>
+      <button type="button" class="btn" id="btn-delete" (click)="onDelete(data)">Delete</button>
     </mat-card-actions>
   </mat-card>
   <br><br>
 </div>
-
+</body>
 
 <!-- <mat-divider></mat-divider>
 <br>

@@ -1,7 +1,7 @@
 <div style="position: absolute;
-top: 110px;
-right: 30px;">
-<button type="button" class="btn btn-outline-primary btn-lg" (click)="openDialog()">Add + </button>
+top: 70px;
+right: 50px;">
+<button type="button" class="btn" id="btn-add" (click)="openDialog()">Add + </button>
 </div>
 <table class="table table-hover table-dark">
     
@@ -22,8 +22,8 @@ right: 30px;">
            
         <!--<td><button type="button" class="btn btn-outline-danger" (click)="onDelete(users.email)">Delete</button></td>-->
         <td>
-          <button type="button" class="btn btn-outline-primary" (click)="openUpdateDialog(otherusers)">Update</button> 
-          <button type="button" class="btn btn-outline-danger">Delete</button>
+          <button type="button" class="btn" id="btn-update" (click)="openUpdateDialog()">Update</button> 
+          <button type="button" class="btn" id="btn-delete" (click)="onDelete(otherusers.userId)">Delete</button>
         </td>
       </tr>
     </tbody>
